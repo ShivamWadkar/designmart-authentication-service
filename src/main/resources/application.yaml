@@ -1,0 +1,48 @@
+# Server Configuration
+server:
+  port: 8080
+
+# JWT Configuration
+jwt:
+  secret: "your_secret_key"      # Use a strong secret key for signing JWT tokens
+  expirationMs: 36000000         # Token expiration time in milliseconds (10 hours)
+
+# Spring Data JPA (PostgreSQL) Configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: shiv@123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # Automatically creates or updates tables
+    show-sql: true       # Logs SQL queries for debugging purposes
+
+# Spring Security Configuration
+  security:
+    user:
+      name: admin             # Default admin username (optional)
+      password: admin123       # Default admin password (optional)
+
+# Hibernate Configuration
+hibernate:
+  dialect: org.hibernate.dialect.PostgreSQLDialect
+  hbm2ddl:
+    auto: update
+
+# Logging Configuration
+logging:
+  level:
+    root: INFO
+    org.hibernate.SQL: DEBUG      # Logs all SQL queries
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE  # Logs the binding of values to parameters
+
+# CORS Configuration (if needed for frontend communication)
+cors:
+  allowed-origins: "*"
+  allowed-methods: "GET, POST, PUT, DELETE"
+  allowed-headers: "Authorization, Content-Type"
+  exposed-headers: "Authorization"
+  allow-credentials: true
