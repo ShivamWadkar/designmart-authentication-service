@@ -4,8 +4,8 @@ server:
 
 # JWT Configuration
 jwt:
-  secret: "your_secret_key"      # Use a strong secret key for signing JWT tokens
-  expirationMs: 36000000         # Token expiration time in milliseconds (10 hours)
+  secret: "yD$5Jc@9Lh%K1vX7tZpQ!rN&Wx*GfC3B"      # Use a strong secret key for signing JWT tokens
+  expiration: 36000000         # Token expiration time in milliseconds (10 hours)
 
 # Spring Data JPA (PostgreSQL) Configuration
 spring:
